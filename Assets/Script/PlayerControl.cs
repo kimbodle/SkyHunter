@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,14 +7,24 @@ using UnityEngine.InputSystem;
 public class PlayerControl : MonoBehaviour
 {
     //[SerializeField] InputAction movement;
+    //[SerializeField] InputAction fire;
 
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship moves up and down based upom player input")]
     [SerializeField] float controlSpeed = 10f;
-    [SerializeField] float xRange = 7.5f; // min, max
-    [SerializeField] float yRange = 5f; // min, max
+    [Tooltip("How far player moves horizontally")][SerializeField] float xRange = 7.5f; // min, max
+    [Tooltip("How far player moves vertically")][SerializeField] float yRange = 5f; // min, max
 
+    [Header("Laser gun array")]
+    [Tooltip("Add all player lasers here")]
+    [SerializeField] GameObject[] lasers;
+
+    [Header("Screen position based tuning")]
     [SerializeField] float positionPitchFactor = -2f;
-    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 2f;
+
+    [Header("Player input based tuning")]
+    [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float controlRollFactor = -20f;
 
 
@@ -24,26 +35,29 @@ public class PlayerControl : MonoBehaviour
     private void OnEnable()
     {
         movement.Enable();
+        fire.Enable
     }
     private void OnDisable()
     {
         movement.Disable();
+        fire.Disable
     }*/
 
     void Update()
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     void ProcessRotation()
     {
-        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToPosition = transform.localPosition.x * positionPitchFactor;
         float pitchDueToControlThrow = yThrow * controlPitchFactor;
 
-        float pitch = -90f + pitchDueToPosition + pitchDueToControlThrow;
+        float pitch =pitchDueToPosition + pitchDueToControlThrow;
         float yaw = transform.localPosition.x * positionYawFactor;
-        float roll = 90f + xThrow * controlRollFactor;
+        float roll =xThrow * controlRollFactor;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll); // È¸Àü
     }
     private void ProcessTranslation()
@@ -70,5 +84,25 @@ public class PlayerControl : MonoBehaviour
 
         /*Debug.Log(xThrow);
         Debug.Log(yThrow);*/
+    }
+    void ProcessFiring()
+    {
+        //if(fire.ReadValue<float>() > 0.5)
+        if (Input.GetButton("Fire1"))
+        {
+            SetLasersActive(true);
+        }
+        else
+        {
+            SetLasersActive(false);
+        }
+    }
+    private void SetLasersActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
     }
 }
