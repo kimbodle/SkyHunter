@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2879409161bad428d897dc22ba003a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 7003797402016459205, guid: 4bf64f160cbe1c34caa19f0f090a72e0, type: 3}
+  dearhFX: {fileID: 7003797402016459205, guid: 4bf64f160cbe1c34caa19f0f090a72e0, type: 3}
   hitVFX: {fileID: 7003797402016459205, guid: e9fbec66d811b3d408d47f3cd4a0091e, type: 3}
   parent: {fileID: 0}
   scorePerHit: 30
