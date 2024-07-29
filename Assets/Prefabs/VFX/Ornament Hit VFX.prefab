@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 212441653557654421}
   - component: {fileID: 937850315264296647}
   m_Layer: 0
-  m_Name: Enemy Hit VFX
+  m_Name: Ornament Hit VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1318,20 +1318,20 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.9531882, b: 0.8160377, a: 1}
-        key1: {r: 0, g: 0.8784314, b: 0.0031406777, a: 0.827451}
-        key2: {r: 0.015686294, g: 0.06299038, b: 0.88235295, a: 0}
-        key3: {r: 0.027974986, g: 0, b: 0.8784314, a: 0}
-        key4: {r: 0.9339623, g: 0.17181383, b: 0.17959976, a: 0}
-        key5: {r: 0.07919741, g: 1, b: 0, a: 0}
+        key0: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+        key1: {r: 0, g: 0, b: 0, a: 1}
+        key2: {r: 0, g: 0.6070881, b: 1, a: 0}
+        key3: {r: 0, g: 0.6070881, b: 1, a: 0}
+        key4: {r: 0, g: 0.6070881, b: 1, a: 0}
+        key5: {r: 0, g: 0.6070881, b: 1, a: 0}
         key6: {r: 0, g: 0.6070881, b: 1, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 1349
-        ctime1: 10409
-        ctime2: 17733
-        ctime3: 26021
-        ctime4: 36623
-        ctime5: 50886
+        ctime1: 63993
+        ctime2: 59753
+        ctime3: 59753
+        ctime4: 59753
+        ctime5: 59753
         ctime6: 59753
         ctime7: 0
         atime0: 193
@@ -1344,7 +1344,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_ColorSpace: 0
-        m_NumColorKeys: 7
+        m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
