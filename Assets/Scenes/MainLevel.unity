@@ -891,6 +891,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4221257251758445020, guid: dd06251aba5f9e145ab3ffbf0ee37365, type: 3}
   m_PrefabInstance: {fileID: 1675913896070604217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1024136934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5845858648919969348, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
+  m_PrefabInstance: {fileID: 2651356014382191951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1091520954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,11 +1260,14 @@ PlayableDirector:
     value: {fileID: 233559125927864005}
   - key: {fileID: 7374025206015577066, guid: b3aef2fc0b829c644a74b6be0d9424cd, type: 2}
     value: {fileID: 1643292005}
+  - key: {fileID: 3605065017775273511, guid: b3aef2fc0b829c644a74b6be0d9424cd, type: 2}
+    value: {fileID: 2651356014382191956}
   m_ExposedReferences:
     m_References:
     - 20175be8013d16847beb130195dfaa46: {fileID: 2651356014382191952}
     - f8703551ef29e39438119bf7282b833c: {fileID: 6687501733433880187}
     - 155f5fe9a0b61054c8b07b657c9d0917: {fileID: 2651356014382191952}
+    - 89baa5ec7966f5a4a93ce5865bf61521: {fileID: 1024136934}
     - 1f715e45923e6af4e909c4d39d0a3437: {fileID: 0}
     - 7a8946e56f3550d48a0744d32d1812ff: {fileID: 2651356014382191952}
     - 983d36e12fb7e8c4cabc636d3876d645: {fileID: 996522835}
@@ -1609,7 +1617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161279825733871825, guid: 973acea70c8d9564e933f9e736b65841, type: 3}
       propertyPath: hitPoints
-      value: 200
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5161279825733871825, guid: 973acea70c8d9564e933f9e736b65841, type: 3}
       propertyPath: scorePerHit
@@ -1741,7 +1749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7933924466938310554, guid: dd06251aba5f9e145ab3ffbf0ee37365, type: 3}
       propertyPath: hitPoints
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7933924466938310554, guid: dd06251aba5f9e145ab3ffbf0ee37365, type: 3}
       propertyPath: scorePerHit
@@ -1876,31 +1884,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 786185601727265528, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
-      propertyPath: m_text
-      value: 'Fight!
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253090200401382510, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5dc273c72d4309a4e9e8a0ef6893d76d, type: 3}
     - target: {fileID: 2845625773883633778, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3200082863817569245, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -269
-      objectReference: {fileID: 0}
-    - target: {fileID: 3200082863817569245, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -125
-      objectReference: {fileID: 0}
-    - target: {fileID: 7674545581695320717, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8080866445718786193, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
       propertyPath: m_Pivot.x
@@ -1990,6 +1976,11 @@ PrefabInstance:
 --- !u!1 &2651356014382191952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8936376326900727916, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
+  m_PrefabInstance: {fileID: 2651356014382191951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2651356014382191956 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7680221559570129337, guid: b918bfc9972189744829f9665d7ae93d, type: 3}
   m_PrefabInstance: {fileID: 2651356014382191951}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3677115220103233094 stripped
@@ -3962,7 +3953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8661095698904075381, guid: ca98874f7551eeb4a9dc8cf44ff1f058, type: 3}
       propertyPath: hitPoints
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8661095698904075381, guid: ca98874f7551eeb4a9dc8cf44ff1f058, type: 3}
       propertyPath: scorePerHit
